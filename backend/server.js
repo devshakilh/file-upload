@@ -2,11 +2,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+
 app.use(cors());
 
 app.post("/upload", (req, res) => {
     // use modules such as express-fileupload, Multer, Busboy
-    
+
     setTimeout(() => {
         console.log('file uploaded')
         return res.status(200).json({ result: true, msg: 'file uploaded' });
